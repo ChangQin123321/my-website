@@ -1,11 +1,165 @@
-html
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <title>我的网站</title>
+  <meta charset="UTF-8" />
+  <title>WASHABI SUSHI </title>
+  <meta name="description" content="Washabi Sushi manu。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      padding: 0 16px 40px;
+    }
+    header {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 0 16px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-size: 14px;
+      color: #666;
+    }
+    .tagline {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #999;
+    }
+    .product-grid {
+      max-width: 960px;
+      margin: 16px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+    .product-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      background: #eee;
+    }
+    .product-body {
+      padding: 12px 14px 14px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .product-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .product-desc {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 8px;
+      flex: 1;
+    }
+    .product-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+    .price {
+      color: #e53935;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .tag {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #f0f0f0;
+      font-size: 11px;
+      color: #777;
+    }
+    .btn-buy {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: none;
+      font-size: 13px;
+      cursor: pointer;
+      background: #ffb300;
+      color: #222;
+      text-decoration: none;
+      text-align: center;
+      margin-top: 4px;
+    }
+    .btn-buy:hover {
+      opacity: 0.9;
+    }
+    .contact {
+      max-width: 960px;
+      margin: 24px auto 0;
+      background: #fff;
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 13px;
+      color: #555;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .contact h2 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+    .contact p + p {
+      margin-top: 4px;
+    }
+    footer {
+      max-width: 960px;
+      margin: 18px auto 0;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello！这是我用 GitHub 搭建的网站！</h1>
-</body>
-</html>
+
+<header>
+  <h1>Washabi sushi menu </h1>
+  <p> Rigna oss: 070 000 000 。</p>
+  <p class="tagline"> Pics is different little than real。</p>
+</header>
+
+<main>
+  <section class="product-grid">
+    <!-- sushi 1 -->
+    <article class="product-card">
+      <img class="product-img" src="images/product1.jpg" alt="商品名称1">
+      <div class="product-body">
+        <h2 class="product-title">fisk </h2>
+        <p class="product-desc">
+          kinsieseka ris
+        </p>
+        <div class="product-meta">
+          <span class="price">SEK 150 </span>
+          <span class="tag">Hot </span>
+        </div>
+        <a class="btn-buy" href="https://wechat.example.com" target="_blank">
+          Kontakt oss/ välkomma
+        </a>
+      </div>
+    </article>
